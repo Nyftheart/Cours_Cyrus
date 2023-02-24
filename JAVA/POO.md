@@ -43,3 +43,34 @@ Lorsqu'un programme alloue de la mémoire dynamiquement, il demande à l'ordinat
 Le garbage collector `effectue régulièrement des scans de la mémoire utilisée` par le programme pour identifier les objets qui ne sont plus référencés par le programme, c'est-à-dire `les objets qui ne sont plus utilisés ou accessibles`. Il libère ensuite automatiquement la mémoire occupée par ces objets. Le garbage collector peut également déplacer les objets en `mémoire pour optimiser l'utilisation de la mémoire` et éviter les fragments de mémoire inutilisables.
 
 Le garbage collector permet de `simplifier la gestion de la mémoire` pour les programmeurs, en évitant les fuites de mémoire et en garantissant que `la mémoire est libérée de manière automatique` et efficace. Cependant, **il peut entraîner des ralentissements du programme** lorsqu'il est activé, car il doit effectuer des scans de la mémoire et des opérations de libération qui peuvent être coûteuses en termes de performance.
+
+# Le Constructeur
+
+En Java, un constructeur est une méthode spéciale utilisée pour initialiser les objets créés à partir d'une classe. Il porte le même nom que la classe dans laquelle il est défini et ne renvoie pas de valeur.
+
+Lorsqu'un nouvel objet est créé à partir d'une classe, le constructeur est automatiquement appelé pour initialiser l'état initial de l'objet. Le constructeur peut prendre des paramètres pour initialiser les variables d'instance de l'objet. Si aucun constructeur n'est défini explicitement dans une classe, Java fournit un constructeur par défaut sans paramètre qui initialise toutes les variables d'instance à leurs valeurs par défaut.
+
+Voici un exemple de définition de constructeur dans une classe Java :
+
+```
+public class Personne {
+private String nom;
+private int age;
+
+    // Constructeur avec deux paramètres
+    public Personne(String nom, int age) {
+        this.nom = nom;
+        this.age = age;
+    }
+
+    // Autres méthodes de la classe Personne...
+}
+```
+Dans cet exemple, nous avons défini un constructeur avec deux paramètres : nom et age. Le mot-clé this est utilisé pour se référer aux variables d'instance de la classe. Lorsqu'un nouvel objet Personne est créé, le constructeur est appelé avec les valeurs des paramètres spécifiées. Par exemple :
+
+```
+Personne p1 = new Personne("Jean", 25);
+```
+Dans cet exemple, nous avons créé un nouvel objet Personne appelé p1 avec le nom "Jean" et l'âge 25. Le constructeur est appelé automatiquement avec ces valeurs pour initialiser les variables d'instance nom et age de l'objet p1.
+
+En résumé, les constructeurs sont utilisés pour initialiser les objets créés à partir d'une classe en fournissant des valeurs initiales aux variables d'instance. Ils portent le même nom que la classe et ne renvoient pas de valeur. Si aucun constructeur n'est défini dans une classe, Java fournit un constructeur par défaut sans paramètre.
