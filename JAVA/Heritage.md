@@ -76,3 +76,56 @@ Voiture maVoiture = new Voiture("Renault", 2020, "Clio");
 Dans cet exemple, la classe Vehicule est la classe parent et la classe Voiture est la sous-classe qui hérite de Vehicule. La classe Vehicule a deux propriétés, marque (protégée) et annee (privée), et deux méthodes, demarrer() (publique) et arreter() (protégée). La classe Voiture ajoute une propriété modele (privée) et une méthode klaxonner() (publique), et redéfinit la méthode demarrer() de la classe parent.
 
 Dans la méthode main(), nous créons une instance de la sous-classe Voiture en utilisant le constructeur de la sous-classe. Nous utilisons ensuite les méthodes de la classe parent et de la sous-classe pour démarrer la voiture, l'arrêter et la faire klaxonner. Notez que la méthode arreter() de la classe parent est protégée, ce qui signifie qu'elle n'est accessible que depuis la sous-classe Voiture.
+
+
+# Annotation 
+
+Les annotations @Override et @Overload sont utilisées en Java pour indiquer que la méthode qui suit redéfinit ou surcharge une méthode existante.
+
+La notation @Override est utilisée pour indiquer que la méthode qui suit redéfinit une méthode de la classe parent. Cela permet au compilateur de détecter les erreurs de syntaxe si la signature de la méthode redéfinie est incorrecte. Si la méthode parent n'est pas correctement redéfinie dans la sous-classe, le compilateur affichera une erreur de compilation. Voici un exemple de code qui utilise @Override :
+
+java
+Copy code
+class Animal {
+public void manger() {
+System.out.println("L'animal mange.");
+}
+}
+
+class Chat extends Animal {
+@Override
+public void manger() {
+System.out.println("Le chat mange des croquettes.");
+}
+}
+
+public class Main {
+public static void main(String[] args) {
+Chat monChat = new Chat();
+monChat.manger(); // affiche "Le chat mange des croquettes."
+}
+}
+Dans cet exemple, la méthode manger() de la classe parent Animal est redéfinie dans la sous-classe Chat à l'aide de @Override.
+
+La notation @Overload est utilisée pour indiquer que la méthode qui suit surcharge une méthode existante de la même classe. Cela signifie que la méthode a le même nom, mais une signature différente (types et/ou nombres d'arguments différents). Cela permet à la même méthode d'être utilisée avec différents types d'arguments. Voici un exemple de code qui utilise @Overload :
+
+```
+class Calculatrice {
+public int additionner(int a, int b) {
+return a + b;
+}
+
+    public double additionner(double a, double b) {
+        return a + b;
+    }
+}
+
+public class Main {
+public static void main(String[] args) {
+Calculatrice maCalculatrice = new Calculatrice();
+System.out.println(maCalculatrice.additionner(2, 3)); // affiche "5"
+System.out.println(maCalculatrice.additionner(2.5, 3.5)); // affiche "6.0"
+}
+}
+```
+Dans cet exemple, la classe Calculatrice a deux méthodes additionner() avec le même nom, mais une signature différente. La première méthode additionne deux entiers, tandis que la seconde méthode additionne deux nombres à virgule flottante. Les deux méthodes peuvent être utilisées simultanément sans provoquer de conflit.
