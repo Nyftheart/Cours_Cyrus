@@ -74,3 +74,4 @@ Personne p1 = new Personne("Jean", 25);
 Dans cet exemple, nous avons créé un nouvel objet Personne appelé p1 avec le nom "Jean" et l'âge 25. Le constructeur est appelé automatiquement avec ces valeurs pour initialiser les variables d'instance nom et age de l'objet p1.
 
 En résumé, les constructeurs sont utilisés pour initialiser les objets créés à partir d'une classe en fournissant des valeurs initiales aux variables d'instance. Ils portent le même nom que la classe et ne renvoient pas de valeur. Si aucun constructeur n'est défini dans une classe, Java fournit un constructeur par défaut sans paramètre.
+
