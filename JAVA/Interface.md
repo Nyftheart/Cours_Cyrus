@@ -50,3 +50,67 @@ Les collections Java offrent de nombreuses fonctionnalités et méthodes pratiqu
 
 
 En résumé, les collections Java sont des structures de données flexibles et puissantes qui facilitent la manipulation de groupes d'objets. Elles offrent de nombreuses fonctionnalités pratiques et sont optimisées pour les performances et la gestion de la mémoire.
+
+Voici quelques exemples de code pour différentes collections en Java:
+
+- ArrayList - une implémentation de la collection List
+
+```
+import java.util.ArrayList;
+
+public class ExampleArrayList {
+public static void main(String[] args) {
+ArrayList<String> fruits = new ArrayList<String>();
+fruits.add("pomme");
+fruits.add("banane");
+fruits.add("orange");
+
+        System.out.println(fruits.get(0)); // affiche "pomme"
+
+        fruits.remove("banane");
+
+        System.out.println(fruits.size()); // affiche 2
+    }
+}
+```
+- HashSet - une implémentation de la collection Set
+```
+import java.util.HashSet;
+
+public class ExampleHashSet {
+public static void main(String[] args) {
+HashSet<String> fruits = new HashSet<String>();
+fruits.add("pomme");
+fruits.add("banane");
+fruits.add("orange");
+
+        System.out.println(fruits.contains("banane")); // affiche true
+
+        fruits.remove("banane");
+
+        System.out.println(fruits.size()); // affiche 2
+    }
+}
+```
+
+- HashMap - une implémentation de la collection Map
+
+```
+import java.util.HashMap;
+
+public class ExampleHashMap {
+public static void main(String[] args) {
+HashMap<String, Integer> fruits = new HashMap<String, Integer>();
+fruits.put("pomme", 1);
+fruits.put("banane", 2);
+fruits.put("orange", 3);
+
+        System.out.println(fruits.get("banane")); // affiche 2
+
+        fruits.remove("banane");
+
+        System.out.println(fruits.size()); // affiche 2
+    }
+}
+```
+Ces exemples ne sont que la pointe de l'iceberg en termes de ce que vous pouvez faire avec les collections en Java. J'espère que cela vous donne une idée de base de ce que sont les collections en Java et de la manière dont elles peuvent être utilisées.
