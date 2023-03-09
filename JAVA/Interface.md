@@ -114,3 +114,39 @@ fruits.put("orange", 3);
 }
 ```
 Ces exemples ne sont que la pointe de l'iceberg en termes de ce que vous pouvez faire avec les collections en Java. J'espère que cela vous donne une idée de base de ce que sont les collections en Java et de la manière dont elles peuvent être utilisées.
+
+# Liste 
+
+En Java, une liste est une collection d'éléments ordonnés qui peut être parcourue séquentiellement. Il existe plusieurs types de listes en Java, mais la plus courante est l'interface List, qui peut être implémentée par plusieurs classes, notamment ArrayList et LinkedList. Voici un exemple de code utilisant ArrayList:
+
+```
+import java.util.ArrayList;
+
+public class ListeExemple {
+public static void main(String[] args) {
+
+      // Créer une liste vide
+      ArrayList<String> liste = new ArrayList<String>();
+
+      // Ajouter des éléments à la liste
+      liste.add("Premier élément");
+      liste.add("Deuxième élément");
+      liste.add("Troisième élément");
+
+      // Accéder à un élément de la liste
+      System.out.println("Le deuxième élément est : " + liste.get(1));
+
+      // Modifier un élément de la liste
+      liste.set(0, "Nouveau premier élément");
+
+      // Supprimer un élément de la liste
+      liste.remove(2);
+
+      // Parcourir la liste avec une boucle for-each
+      for (String element : liste) {
+         System.out.println(element);
+      }
+}
+}
+```
+Dans cet exemple, nous créons une liste vide en utilisant la classe ArrayList. Ensuite, nous ajoutons quelques éléments à la liste en utilisant la méthode add(). Nous accédons à un élément spécifique de la liste en utilisant la méthode get(). Nous modifions un élément de la liste en utilisant la méthode set(). Nous supprimons un élément de la liste en utilisant la méthode remove(). Enfin, nous parcourons la liste à l'aide d'une boucle for-each
